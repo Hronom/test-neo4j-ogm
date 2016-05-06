@@ -12,6 +12,8 @@ public class App {
         SessionFactory sessionFactory = new SessionFactory("com.github.hronom.test.neo4j.ogm.domain");
         Session session = sessionFactory.openSession();
 
+        session.purgeDatabase();
+
         Movie movie = new Movie("The Matrix", 1999);
 
         Actor keanu = new Actor("Keanu Reeves");
